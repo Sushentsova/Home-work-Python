@@ -1,0 +1,40 @@
+1. Установлен ли пакет `pillow` в глобальном окружении. Если да — зафиксировать версию.
+C:\Users\User\PycharmProjects\Home-work-Python>pip show pillow
+WARNING: Package(s) not found: pillow
+
+2. Установить самую свежую версию `pillow`, если ранее она не была установлена.
+C:\Users\User\PycharmProjects\Home-work-Python>pip install pillow
+Collecting pillow
+  Using cached Pillow-9.0.0-cp39-cp39-win_amd64.whl (3.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.0
+WARNING: You are using pip version 21.2.4; however, version 22.0.2 is available.
+You should consider upgrading via the 'C:\Users\User\AppData\Local\Programs\Python\Python39\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\User\PycharmProjects\Home-work-Python>pip freeze
+Pillow==9.0.0
+
+3.1 Создать виртуальное окружение.
+C:\Users\User\PycharmProjects\Home-work-Python>python -m venv virt
+
+3.2 Активировать виртуальное окружение.
+C:\Users\User\PycharmProjects\Home-work-Python>"virt/Scripts/activate.bat"
+
+3.3 Убедиться, что в нем нет пакета `pillow`.
+(virt) C:\Users\User\PycharmProjects\Home-work-Python>pip freeze
+
+4. Установить в виртуальное окружение `pillow` версии `7.1.1` (или другой, отличной от самой свежей).
+(virt) C:\Users\User\PycharmProjects\Home-work-Python>pip install pillow==8.1.0
+Collecting pillow==8.1.0
+  Using cached Pillow-8.1.0-cp39-cp39-win_amd64.whl (2.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-8.1.0
+WARNING: You are using pip version 21.2.4; however, version 22.0.2 is available.
+You should consider upgrading via the 'C:\Users\User\PycharmProjects\Home-work-Python\virt\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(virt) C:\Users\User\PycharmProjects\Home-work-Python>pip freeze
+Pillow==8.1.0
+
+5. Деактивировать виртуальное окружение.
+(virt) C:\Users\User\PycharmProjects\Home-work-Python>deactivate
+C:\Users\User\PycharmProjects\Home-work-Python>
